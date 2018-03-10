@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "GameActor.h"
 enum Button
 {
 	BUTTON_X,
@@ -8,48 +9,39 @@ enum Button
 	BUTTON_B
 };
 
-bool isPressed(Button btn);
-void jump();
-void fireGun();
-void swapWeapon();
-void lurchIneffectively();
+static int msg = 0;
 
 class Command
 {
 public:
-	Command();
-	virtual ~Command();
-	virtual void execute() = 0;
+
+	virtual void execute(GameActor &actor) = 0;
 };
 
-class JumpCommand :Command
+class JumpCommand :public Command
 {
 public:
-	JumpCommand();
-	~JumpCommand();
-	virtual void execute();
+
+	virtual void execute(GameActor &actor);
 };
 
-class FireCommand :Command
+class FireCommand :public Command
 {
 public:
-	FireCommand();
-	~FireCommand();
-	virtual void execute();
+
+	virtual void execute(GameActor &actor);
 };
-class SwapCommand :Command
+class SwapCommand :public Command
 {
 public:
-	SwapCommand();
-	~SwapCommand();
-	virtual void execute();
+
+	virtual void execute(GameActor &actor);
 };
-class LurchCommand :Command
+class LurchCommand :public Command
 {
 public:
-	LurchCommand();
-	~LurchCommand();
-	virtual void execute();
+
+	virtual void execute(GameActor &actor);
 };
 
 

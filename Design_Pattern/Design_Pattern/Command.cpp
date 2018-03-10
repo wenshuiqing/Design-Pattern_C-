@@ -1,30 +1,15 @@
 #include "Command.h"
 
 
-
-void jump() {
-	std::cout << "jump" << std::endl;
+void JumpCommand::execute(GameActor &actor) {
+	actor.jump();
 }
-void fireGun(){
-	std::cout << "fireGun" << std::endl;
+void FireCommand::execute(GameActor &actor) {
+	actor.fireGun();
 }
-void swapWeapon() {
-	std::cout << "swapWeapon" << std::endl;
+void LurchCommand::execute(GameActor &actor) {
+	actor.lurchIneffectively();
 }
-
-void lurchIneffectively() {
-	std::cout << "lurchIneffectively" << std::endl;
-}
-
-void JumpCommand::execute() {
-	jump();
-}
-void FireCommand::execute() {
-	fireGun();
-}
-void LurchCommand::execute() {
-	lurchIneffectively();
-}
-void SwapCommand::execute() {
-	swapWeapon();
+void SwapCommand::execute(GameActor &actor) {
+	actor.swapWeapon();
 }

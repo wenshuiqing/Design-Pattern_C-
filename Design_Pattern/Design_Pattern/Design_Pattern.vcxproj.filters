@@ -24,12 +24,21 @@
     <ClCompile Include="InputHandler.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="GameActor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Command.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="InputHandler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameActor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PreDeclare.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

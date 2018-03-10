@@ -1,19 +1,17 @@
 #pragma once
+#include "PreDeclare.h"
 #include "Command.h"
 class InputHandler
 {
 public:
 	InputHandler();
 	virtual ~InputHandler();
-	void handleInput();
-
-
-
+	CommandPtr handleInput();
+	bool isPressed(Button btn);
 private:
-	Command * buttonX_;
-	Command * buttonY_;
-	Command * buttonA_;
-	Command * buttonB_;
-
+	CommandPtr buttonX_;
+	CommandPtr buttonY_;
+	CommandPtr buttonA_;
+	CommandPtr buttonB_;
 };
 
